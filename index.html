@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <form class="form">
+            <div class="form__search">
+                <div class="form__item-box">
+                    <label for="search">Место или название отеля</label>
+                    <input class="form__search-input" type="search" id="search" placeholder="Введите здесь место">
+                </div>
+            </div>
+
+            <div class="form__dates">
+                <div class="form__item-box">
+                    <label for="start-date">Заезд</label>
+                    <input type="text" class="form__start-date" id="start-date" placeholder="Дата заезда" size="9" maxlength="50" onkeydown="size=value.length||10" onkeyup="onkeydown()" onkeypress="onkeydown()" onchange="onkeydown()">
+                </div>
+                <span class="separator"> . </span>
+                <div class="form__item-box">
+                    <label for="end-date">Выезд</label>
+                    <input type="text" class="form__end-date" id="end-date" placeholder="Дата выезда" size="10" maxlength="50" onkeydown="size=value.length||10" onkeyup="onkeydown()" onkeypress="onkeydown()" onchange="onkeydown()">
+                </div>
+            </div>
+
+            <div class="form__persons">
+                <div class="form__item-box">
+                    <label for="rooms">Номера</label>
+                    <input class="form__persons-input" type="number" id="rooms" value="1" min="0">
+                    <div class="form__persons-count">
+                        <button class="form__persons-up" type="button"></button>
+                        <button class="form__persons-down" type="button"></button>
+                    </div>
+                </div>
+
+                <div class="form__item-box">
+                    <label for="adults">Взрослые</label>
+                    <input type="number" id="adults" value="1" min="0">
+                    <div class="form__persons-count">
+                        <button class="form__persons-up" type="button"></button>
+                        <button class="form__persons-down" type="button"></button>
+                    </div>
+                </div>
+
+                <div class="form__item-box">
+                    <label for="kids">Дети</label>
+                    <input type="number" id="kids" value="0" min="0">
+                    <div class="form__persons-count">
+                        <button class="form__persons-up" type="button"></button>
+                        <button class="form__persons-down" type="button"></button>
+                    </div>
+                </div>
+
+                <button class="form__persons-btn" disabled>
+                    <svg height="448pt" viewBox="0 0 448 448" width="448pt" xmlns="http://www.w3.org/2000/svg"><path d="m408 184h-136c-4.417969 0-8-3.582031-8-8v-136c0-22.089844-17.910156-40-40-40s-40 17.910156-40 40v136c0 4.417969-3.582031 8-8 8h-136c-22.089844 0-40 17.910156-40 40s17.910156 40 40 40h136c4.417969 0 8 3.582031 8 8v136c0 22.089844 17.910156 40 40 40s40-17.910156 40-40v-136c0-4.417969 3.582031-8 8-8h136c22.089844 0 40-17.910156 40-40s-17.910156-40-40-40zm0 0"/></svg>
+                </button>
+            </div>
+
+            <button class="form__btn">найти</button>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script src="js/jquery.daterangepicker.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

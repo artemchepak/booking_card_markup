@@ -1,0 +1,460 @@
+/* start fonts */
+
+@font-face {
+    font-family: "AvenirNextCyr";
+    src: url('../fonts/fonts/AvenirNextCyr-Medium.woff2') format('woff2'), url('../fonts/AvenirNextCyr-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FiraSans";
+    src: url('../fonts/FiraSans-BoldItalic.woff2') format('woff2'), url('../fonts/FiraSans-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "ProximaNova";
+    src: url('../fonts/ProximaNova-Bold.woff2') format('woff2'), url('../fonts/ProximaNova-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ProximaNova";
+    src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'), url('../fonts/ProximaNova-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "MyriadPro";
+    src: url('../fonts/MyriadPro-Regular.woff2') format('woff2'), url('../fonts/MyriadPro-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* end fonts */
+
+
+/* start styles */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+
+input {
+    border: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+button:focus,
+a:focus {
+    outline: none;
+}
+
+button:disabled {
+    opacity: 0.58;
+    cursor: not-allowed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.form {
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 14px 15px 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-family: "MyriadPro";
+    font-weight: 400;
+    color: #232323;
+}
+
+.form input {
+    font-family: "FiraSans";
+    font-weight: 700;
+    font-style: italic;
+    font-size: 18px;
+    color: #383838;
+    text-indent: 1px;
+    padding: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+input:focus {
+    border-bottom: 2px solid #ed9915;
+}
+
+.form__search {
+    width: 214px;
+    position: relative;
+}
+
+.form__search::before {
+    content: '';
+    background-image: url('../icons/placeholder.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 29px;
+    left: 0;
+    z-index: 2;
+}
+
+.form__search-input {
+    margin-left: 22px;
+    width: 214px;
+}
+
+.form__search-input::placeholder {
+    color: #6b6b6b;
+}
+
+.form__search,
+.form__dates,
+.form__persons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form__item-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__dates {
+    padding: 0 30px;
+    position: relative;
+    width: 395px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__dates::before,
+.form__dates::after {
+    content: '';
+    width: 2px;
+    height: 32px;
+    background-color: #e9e9e9;
+    position: absolute;
+    top: 11px;
+}
+
+.form__dates::before {
+    left: 0;
+}
+
+.form__dates::after {
+    right: 0;
+}
+
+.form .form__start-date {
+    margin-left: 28px;
+    position: relative;
+    z-index: 1;
+}
+
+.form__dates .form__item-box:nth-child(1)::before {
+    content: '';
+    background-image: url('../icons/calendar.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 29px;
+    left: 40px;
+    z-index: 2;
+}
+
+.form__dates .form__item-box:nth-child(3)::after {
+    content: '';
+    background-image: url('../icons/down-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 32px;
+    right: 25px;
+    z-index: 2;
+}
+
+.form__dates span {
+    display: flex;
+    align-items: center;
+    color: #9a9a9a;
+    font-size: 30px;
+}
+
+.form__persons input {
+    width: 30px;
+    border: 1px solid rgb(139, 145, 152);
+    text-align: center;
+    position: relative;
+    font-family: "AvenirNextCyr";
+    font-size: 16px;
+    color: #8b9198;
+    font-weight: 500;
+    font-style: normal;
+    padding: 4px 0;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    /* margin: 0; */
+    display: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.form__persons .form__item-box {
+    min-width: 80px;
+    position: relative;
+}
+
+.form__persons-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #ed9915;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__persons-count {
+    position: absolute;
+    top: 13px;
+    left: 35px;
+    width: 11px;
+}
+
+.form__persons-up,
+.form__persons-down {
+    height: 13px;
+    width: 11px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+}
+
+.form__persons-up {
+    transform: rotate(180deg);
+    background-image: url(../icons/arrow-filled-up.svg);
+}
+
+.form__persons-down {
+    background-image: url(../icons/arrow-filled-down.svg);
+}
+
+.form__btn {
+    text-transform: uppercase;
+    font-family: "ProximaNova";
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #FFF;
+    background-color: #ed9915;
+    border-radius: 2px;
+    padding: 23px 57px;
+}
+
+.form__btn:hover,
+.form__persons-btn:hover,
+.form__btn:focus,
+.form__persons-btn:focus {
+    background-color: #E19111;
+}
+
+
+/* end styles */
+
+
+/* start media */
+
+@media (max-width: 1170px) {
+    .form {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+    .form__search {
+        margin-left: 0;
+    }
+    .form__search-input {
+        margin-left: 13px;
+    }
+    .form__dates {
+        padding: 0 25px;
+        width: 335px;
+    }
+    .form__dates .form__item-box:nth-child(1)::before {
+        top: 29px;
+        left: 24px;
+    }
+    .form__dates .form__item-box:nth-child(3)::after {
+        top: 32px;
+        right: 14px;
+    }
+    .form__persons .form__item-box {
+        min-width: 60px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .form {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .form__search::before {
+        top: 21px;
+    }
+    .form__dates .form__item-box:nth-child(1)::before {
+        top: 21px;
+        left: 24px;
+    }
+    .form__dates .form__item-box:nth-child(3)::after {
+        top: 21px;
+        right: 14px;
+    }
+    .form__btn {
+        margin: 20px auto 0 auto;
+    }
+}
+
+@media (max-width: 845px) {
+    .form {
+        flex-direction: column;
+        padding: 30px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .form>div+div {
+        margin-top: 30px;
+    }
+    .form__search .form__item-box {
+        width: 100%;
+    }
+    .form__search-input {
+        width: 100%;
+        margin-left: 20px;
+    }
+    .form__search,
+    .form__dates,
+    .form__persons {
+        width: 100%;
+    }
+    .form__dates::before,
+    .form__dates::after {
+        display: none;
+    }
+    .form__dates {
+        padding-left: 0;
+    }
+    .form__dates .form__item-box:nth-child(1)::before {
+        top: 21px;
+        left: 0;
+    }
+    .form__dates .form__item-box:nth-child(3)::after {
+        top: 21px;
+        right: 0;
+    }
+}
+
+@media (max-width: 845px) {
+    .form {
+        padding: 15px;
+    }
+    .form__dates {
+        padding-right: 10px;
+    }
+    .form__btn {
+        padding: 16px 35px;
+    }
+    .form__search-input {
+        margin-left: 13px;
+    }
+    .form .form__start-date {
+        margin-left: 16px;
+    }
+    .form__persons-count {
+        left: 45px;
+    }
+}
+
+@media (max-width: 450px) {
+    .form input {
+        font-size: 16px;
+    }
+}
+
+
+/* end media */
