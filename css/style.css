@@ -287,18 +287,10 @@ input[type=number] {
     height: 35px;
     border-radius: 50%;
     background-color: #ed9915;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    font-weight: 700;
-    color: #fff;
-    font-family: sans-serif;
-}
-
-.form__persons-btn svg {
-    width: 23px;
-    height: 23px;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../icons/add.svg');
 }
 
 .form__persons-count {
