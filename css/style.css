@@ -263,6 +263,7 @@ input:focus {
     font-weight: 500;
     font-style: normal;
     padding: 4px 0;
+    border-radius: 0;
 }
 
 input[type=number]::-webkit-outer-spin-button,
@@ -291,18 +292,28 @@ input[type=number] {
     justify-content: center;
 }
 
+.form__persons-btn svg {
+    width: 23px;
+    height: 23px;
+}
+
 .form__persons-count {
     position: absolute;
-    top: 13px;
+    top: 17px;
     left: 35px;
     width: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 28px;
 }
 
 .form__persons-up,
 .form__persons-down {
     height: 13px;
     width: 11px;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-repeat: no-repeat;
 }
@@ -382,8 +393,11 @@ input[type=number] {
         left: 24px;
     }
     .form__dates .form__item-box:nth-child(3)::after {
-        top: 21px;
+        top: 26px;
         right: 14px;
+    }
+    .form .form__start-date {
+        margin-left: 16px;
     }
     .form__btn {
         margin: 20px auto 0 auto;
@@ -451,8 +465,17 @@ input[type=number] {
 }
 
 @media (max-width: 450px) {
+    .form {
+        padding: 12px;
+    }
     .form input {
-        font-size: 16px;
+        font-size: 15px;
+    }
+    .form__dates .form__item-box {
+        width: 50%;
+    }
+    .form__dates input {
+        padding-right: 2px;
     }
 }
 
