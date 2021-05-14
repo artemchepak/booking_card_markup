@@ -315,7 +315,7 @@ input[type=number] {
     width: 13px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .form__persons-up {
