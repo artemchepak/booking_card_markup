@@ -312,7 +312,7 @@ input[type=number] {
 .form__persons-up,
 .form__persons-down {
     height: 13px;
-    width: 11px;
+    width: 13px;
     background-size: contain;
     background-repeat: no-repeat;
     background-repeat: no-repeat;
@@ -438,7 +438,7 @@ input[type=number] {
         left: 0;
     }
     .form__dates .form__item-box:nth-child(3)::after {
-        top: 21px;
+        top: 24px;
         right: 0;
     }
 }
